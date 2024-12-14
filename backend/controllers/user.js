@@ -2,6 +2,7 @@ import { Recipe } from "../models/recipe.model.js";
 
 export const getAllRecipes = async (req, res) => {
   try {
+    console.log("lul");
     const recipes = await Recipe.find();
     if (recipes.length > 0) {
       res.status(200).json({ success: true, recipes });
