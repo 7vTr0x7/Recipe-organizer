@@ -78,7 +78,9 @@ const Home = () => {
         <div className="row g-3">
           {recipes?.length > 0 &&
             recipes
-              .filter((recipe) => recipe.name.includes(text))
+              .filter((recipe) =>
+                recipe.name.toLowerCase().includes(text.toLowerCase())
+              )
               .map((recipe) => (
                 <div key={recipe._id} className="col-md-3 ">
                   <div className="card pb-3">
